@@ -12,14 +12,13 @@
 body{
 margin:0;
 font-family:Inter;
-background:#061524;
+background:#061a2b;
 color:#fff;
 }
 
-/* HERO */
 header{
 height:100vh;
-background:url('images/herói.jpeg') center/cover no-repeat;
+background:url('images/piscina-1.jpeg') center/cover no-repeat;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -32,7 +31,7 @@ content:"";
 position:absolute;
 width:100%;
 height:100%;
-background:rgba(0,20,40,0.65);
+background:rgba(0,10,30,0.65);
 top:0;left:0;
 }
 
@@ -46,11 +45,11 @@ padding:20px;
 h1{
 font-family:Playfair Display;
 font-size:55px;
-color:#a8dcff;
+color:#8fd3ff;
 margin:0;
 }
 
-p{color:#cfe9ff;font-size:18px;}
+p{color:#cfe9ff;}
 
 .btn{
 display:inline-block;
@@ -65,7 +64,6 @@ font-weight:bold;
 .instagram{background:#E1306C;color:#fff;}
 .reserve{background:#0099cc;color:#fff;}
 
-/* SEÇÕES */
 section{
 padding:60px 20px;
 max-width:1100px;
@@ -74,16 +72,15 @@ margin:auto;
 
 h2{
 font-family:Playfair Display;
+color:#7cc8ff;
 text-align:center;
-color:#7fd3ff;
 margin-bottom:20px;
 }
 
-/* GRID */
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:12px;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:10px;
 }
 
 .grid img{
@@ -96,62 +93,29 @@ transition:0.3s;
 transform:scale(1.03);
 }
 
-/* AVALIAÇÕES */
-.reviews{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:15px;
-margin-top:20px;
-}
-
-.review{
+/* INFO BOX */
+.box{
 background:#0b2a44;
-padding:15px;
+padding:20px;
 border-radius:10px;
-}
-
-.score{
-font-size:40px;
-color:#00d4ff;
-font-weight:bold;
-text-align:center;
-margin:20px 0;
-}
-
-.lang{
-position:fixed;
-top:20px;
-right:20px;
-background:#0b2238;
-padding:10px;
-border-radius:10px;
+margin-top:20px;
 }
 
 footer{
 text-align:center;
 padding:30px;
-background:#04101c;
-color:#88a9c7;
+background:#04111f;
+color:#88b7d6;
 }
 </style>
 </head>
 
 <body>
 
-<!-- LANG -->
-<div class="lang">
-<select onchange="changeLang(this.value)">
-<option value="pt">PT</option>
-<option value="en">EN</option>
-<option value="es">ES</option>
-</select>
-</div>
-
-<!-- HERO -->
 <header>
 <div class="hero">
-<h1 id="title">Pousada Le Baron</h1>
-<p id="subtitle">Seu refúgio na Praia do Francês</p>
+<h1>Pousada Le Baron</h1>
+<p>Seu refúgio na Praia do Francês</p>
 
 <a class="btn reserve" href="#reserve">Reservar</a>
 <a class="btn whatsapp" href="https://wa.me/558232601165">WhatsApp</a>
@@ -159,31 +123,32 @@ color:#88a9c7;
 </div>
 </header>
 
-<!-- ABOUT -->
+<!-- SOBRE -->
 <section>
-<h2 id="aboutTitle">Bem-vindo</h2>
-<p id="aboutText">
-Localizada na Avenida Caravelas, 578 – Praia do Francês – AL, a Pousada Le Baron oferece conforto e uma experiência única de hospedagem.
+<h2>Bem-vindo</h2>
+<p>
+Localizada na Praia do Francês – Alagoas, a Pousada Le Baron oferece conforto, tranquilidade e uma experiência única de hospedagem.
 </p>
-</section>
 
-<!-- AVALIAÇÕES -->
-<section>
-<h2>Avaliações dos Hóspedes</h2>
-
-<div class="score">9.0 / 10</div>
-
-<div class="reviews">
-
-<div class="review">"Excelente pousada, limpa e muito confortável. Voltaria com certeza!"</div>
-<div class="review">"Atendimento impecável e localização perfeita."</div>
-<div class="review">"Café da manhã ótimo e ambiente muito tranquilo."</div>
-<div class="review">"Piscina maravilhosa e quartos muito confortáveis."</div>
-
+<div class="box">
+<strong>CNPJ:</strong> 10.930.667/0001-47
 </div>
 </section>
 
-<!-- QUARTO STANDARD -->
+<!-- O QUE FAZER -->
+<section>
+<h2>O que fazer na Praia do Francês</h2>
+
+<div class="box">
+🌊 Curtir a praia de águas cristalinas e mornas<br>
+🏄‍♂️ Praticar surf nas áreas próprias para ondas<br>
+🍹 Aproveitar bares e restaurantes à beira-mar<br>
+🚤 Passeios de barco e jangada<br>
+📸 Pôr do sol inesquecível
+</div>
+</section>
+
+<!-- QUARTOS STANDARD -->
 <section>
 <h2>Quartos Standard</h2>
 <div class="grid">
@@ -226,7 +191,6 @@ Localizada na Avenida Caravelas, 578 – Praia do Francês – AL, a Pousada Le 
 <img src="images/área-comum-6.jpeg">
 <img src="images/área-comum-7.jpeg">
 <img src="images/área-comum-8.jpeg">
-<img src="images/área-comum-9.jpeg">
 </div>
 </section>
 
@@ -246,32 +210,8 @@ width="100%" height="300" style="border:0;border-radius:10px;">
 </section>
 
 <footer>
-Pousada Le Baron • Praia do Francês • Alagoas
+Pousada Le Baron • Praia do Francês • Alagoas • CNPJ 10.930.667/0001-47
 </footer>
-
-<!-- TRADUTOR COMPLETO -->
-<script>
-function changeLang(lang){
-
-if(lang==="en"){
-document.getElementById("title").innerText="Le Baron Inn";
-document.getElementById("subtitle").innerText="Your refuge in Praia do Francês";
-document.getElementById("aboutTitle").innerText="Welcome";
-document.getElementById("aboutText").innerText="Located in Avenida Caravelas, 578 – Alagoas.";
-}
-
-if(lang==="es"){
-document.getElementById("title").innerText="Posada Le Baron";
-document.getElementById("subtitle").innerText="Tu refugio en Praia do Francés";
-document.getElementById("aboutTitle").innerText="Bienvenido";
-document.getElementById("aboutText").innerText="Ubicada en Avenida Caravelas, 578 – Alagoas.";
-}
-
-if(lang==="pt"){
-location.reload();
-}
-}
-</script>
 
 </body>
 </html>
