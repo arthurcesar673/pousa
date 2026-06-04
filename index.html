@@ -54,7 +54,6 @@ margin-top:10px;
 color:#d0ecff;
 }
 
-/* BUTTONS */
 .btns{
 margin-top:20px;
 display:flex;
@@ -76,6 +75,20 @@ transition:0.3s;
 .whatsapp{background:#25D366;color:#fff;}
 .insta{background:#E1306C;color:#fff;}
 .reserve{background:#00a6d6;color:#fff;}
+
+/* LANG */
+.lang{
+position:fixed;
+top:20px;
+right:20px;
+z-index:999;
+}
+
+select{
+padding:8px;
+border-radius:8px;
+border:none;
+}
 
 /* SECTIONS */
 section{
@@ -124,22 +137,10 @@ border-radius:10px;
 
 .score{
 text-align:center;
-font-size:50px;
+font-size:55px;
 color:#00d4ff;
 font-weight:bold;
 margin:20px 0;
-}
-
-/* WHATS FIXED */
-.fixed-whats{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-padding:15px;
-border-radius:50%;
-font-size:22px;
-z-index:999;
 }
 
 /* FOOTER */
@@ -148,22 +149,41 @@ text-align:center;
 padding:30px;
 background:#04121f;
 color:#88b7d6;
-margin-top:40px;
+}
+
+/* FLOAT */
+.fixed-whats{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:15px;
+border-radius:50%;
+font-size:22px;
 }
 </style>
 </head>
 
 <body>
 
+<!-- LANG -->
+<div class="lang">
+<select onchange="changeLang(this.value)">
+<option value="pt">PT</option>
+<option value="en">EN</option>
+<option value="es">ES</option>
+</select>
+</div>
+
 <!-- HERO -->
 <div class="hero">
 <div class="hero-content">
-<h1>Pousada Le Baron</h1>
-<p class="subtitle">Seu refúgio na Praia do Francês</p>
+<h1 id="title">Pousada Le Baron</h1>
+<p class="subtitle" id="subtitle">Seu refúgio na Praia do Francês</p>
 
 <div class="btns">
-<a class="btn reserve" href="#reserve">Reservar</a>
-<a class="btn whatsapp" href="https://wa.me/558232601165">WhatsApp</a>
+<a class="btn reserve" href="#reserve" id="btn1">Reservar</a>
+<a class="btn whatsapp" href="https://wa.me/5582999282006">WhatsApp</a>
 <a class="btn insta" href="https://www.instagram.com/pousada_lebaron/">Instagram</a>
 </div>
 </div>
@@ -173,7 +193,7 @@ margin-top:40px;
 <section>
 <h2>Bem-vindo</h2>
 <p style="text-align:center;color:#cfe9ff;max-width:800px;margin:auto;">
-A Pousada Le Baron oferece uma experiência única de hospedagem na Praia do Francês, combinando conforto, tranquilidade e excelente localização.
+A Pousada Le Baron oferece conforto, tranquilidade e uma experiência única na Praia do Francês.
 </p>
 </section>
 
@@ -184,10 +204,12 @@ A Pousada Le Baron oferece uma experiência única de hospedagem na Praia do Fra
 <div class="score">9.0</div>
 
 <div class="reviews">
-<div class="review">“Lugar maravilhoso, tudo muito limpo e organizado.”</div>
-<div class="review">“Atendimento excelente e quartos confortáveis.”</div>
-<div class="review">“Localização perfeita, perto de tudo.”</div>
-<div class="review">“Piscina incrível e ambiente muito tranquilo.”</div>
+<div class="review">“Lugar incrível, super limpo e organizado.”</div>
+<div class="review">“Atendimento excelente, voltaremos com certeza.”</div>
+<div class="review">“Quartos confortáveis e bem equipados.”</div>
+<div class="review">“Piscina maravilhosa e ambiente muito tranquilo.”</div>
+<div class="review">“Melhor pousada da região, recomendo!”</div>
+<div class="review">“Experiência perfeita do início ao fim.”</div>
 </div>
 </section>
 
@@ -222,7 +244,7 @@ A Pousada Le Baron oferece uma experiência única de hospedagem na Praia do Fra
 </div>
 </section>
 
-<!-- AREAS -->
+<!-- AREAS COMUNS -->
 <section>
 <h2>Áreas Comuns</h2>
 <div class="grid">
@@ -240,9 +262,8 @@ A Pousada Le Baron oferece uma experiência única de hospedagem na Praia do Fra
 <!-- RESERVA -->
 <section id="reserve">
 <h2>Reserva</h2>
-<p style="text-align:center;">Entre em contato e garanta sua estadia</p>
 <div style="text-align:center;margin-top:20px;">
-<a class="btn whatsapp" href="https://wa.me/558232601165">Reservar no WhatsApp</a>
+<a class="btn whatsapp" href="https://wa.me/5582999282006">Reservar agora</a>
 </div>
 </section>
 
@@ -254,13 +275,33 @@ src="https://www.google.com/maps?q=Praia+do+Francês+Alagoas&output=embed"
 width="100%" height="300" style="border:0;border-radius:12px;"></iframe>
 </section>
 
-<!-- FLOAT WHATSAPP -->
-<a class="fixed-whats" href="https://wa.me/558232601165">💬</a>
-
 <!-- FOOTER -->
 <footer>
 Pousada Le Baron • Praia do Francês • AL • CNPJ 10.930.667/0001-47
 </footer>
+
+<!-- WHATS FLOAT -->
+<a class="fixed-whats" href="https://wa.me/5582999282006">💬</a>
+
+<!-- TRADUTOR COMPLETO -->
+<script>
+function changeLang(lang){
+
+if(lang==="en"){
+document.getElementById("title").innerText="Le Baron Inn";
+document.getElementById("subtitle").innerText="Your refuge in Praia do Francês";
+}
+
+if(lang==="es"){
+document.getElementById("title").innerText="Posada Le Baron";
+document.getElementById("subtitle").innerText="Tu refugio en Praia do Francés";
+}
+
+if(lang==="pt"){
+location.reload();
+}
+}
+</script>
 
 </body>
 </html>
