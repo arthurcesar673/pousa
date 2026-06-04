@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Pousada Le Baron | Praia do Francês</title>
+<title>Pousada Le Baron</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -17,7 +17,6 @@ background:#061826;
 color:#fff;
 }
 
-/* HERO */
 .hero{
 height:100vh;
 background:url('piscina-1.jpeg') center/cover no-repeat;
@@ -38,7 +37,6 @@ background:rgba(0,20,40,0.6);
 .hero-content{
 position:relative;
 z-index:2;
-max-width:800px;
 padding:20px;
 }
 
@@ -50,33 +48,23 @@ color:#a6ddff;
 
 .subtitle{
 font-size:18px;
-margin-top:10px;
 color:#d0ecff;
-}
-
-.btns{
-margin-top:20px;
-display:flex;
-gap:10px;
-justify-content:center;
-flex-wrap:wrap;
+margin-top:10px;
 }
 
 .btn{
 padding:12px 18px;
+margin:5px;
 border-radius:8px;
 text-decoration:none;
+display:inline-block;
 font-weight:bold;
-transition:0.3s;
 }
-
-.btn:hover{transform:scale(1.05);}
 
 .whatsapp{background:#25D366;color:#fff;}
 .insta{background:#E1306C;color:#fff;}
 .reserve{background:#00a6d6;color:#fff;}
 
-/* LANG */
 .lang{
 position:fixed;
 top:20px;
@@ -90,9 +78,8 @@ border-radius:8px;
 border:none;
 }
 
-/* SECTIONS */
 section{
-padding:70px 20px;
+padding:60px 20px;
 max-width:1100px;
 margin:auto;
 }
@@ -100,66 +87,31 @@ margin:auto;
 h2{
 text-align:center;
 font-family:Playfair Display;
-font-size:32px;
 color:#7fd3ff;
-margin-bottom:25px;
+margin-bottom:20px;
 }
 
-/* GRID */
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:12px;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:10px;
 }
 
 .grid img{
 width:100%;
-border-radius:12px;
+border-radius:10px;
 transition:0.3s;
 }
 
 .grid img:hover{
-transform:scale(1.05);
+transform:scale(1.04);
 }
 
-/* REVIEWS */
-.reviews{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:15px;
-}
-
-.review{
-background:#0c2a44;
-padding:15px;
-border-radius:10px;
-}
-
-.score{
-text-align:center;
-font-size:55px;
-color:#00d4ff;
-font-weight:bold;
-margin:20px 0;
-}
-
-/* FOOTER */
 footer{
 text-align:center;
 padding:30px;
 background:#04121f;
 color:#88b7d6;
-}
-
-/* FLOAT */
-.fixed-whats{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-padding:15px;
-border-radius:50%;
-font-size:22px;
 }
 </style>
 </head>
@@ -181,41 +133,33 @@ font-size:22px;
 <h1 id="title">Pousada Le Baron</h1>
 <p class="subtitle" id="subtitle">Seu refúgio na Praia do Francês</p>
 
-<div class="btns">
 <a class="btn reserve" href="#reserve" id="btn1">Reservar</a>
-<a class="btn whatsapp" href="https://wa.me/5582999282006">WhatsApp</a>
-<a class="btn insta" href="https://www.instagram.com/pousada_lebaron/">Instagram</a>
-</div>
+<a class="btn whatsapp" href="https://wa.me/5582999282006" id="btn2">WhatsApp</a>
+<a class="btn insta" href="https://www.instagram.com/pousada_lebaron/" id="btn3">Instagram</a>
 </div>
 </div>
 
 <!-- ABOUT -->
 <section>
-<h2>Bem-vindo</h2>
-<p style="text-align:center;color:#cfe9ff;max-width:800px;margin:auto;">
-A Pousada Le Baron oferece conforto, tranquilidade e uma experiência única na Praia do Francês.
+<h2 id="h2_about">Bem-vindo</h2>
+<p id="about_text" style="text-align:center;">
+A Pousada Le Baron oferece conforto e tranquilidade na Praia do Francês.
 </p>
 </section>
 
 <!-- REVIEWS -->
 <section>
-<h2>Avaliações dos Hóspedes</h2>
+<h2 id="h2_reviews">Avaliações</h2>
+<p style="text-align:center;font-size:40px;color:#00d4ff;">9.0</p>
 
-<div class="score">9.0</div>
-
-<div class="reviews">
-<div class="review">“Lugar incrível, super limpo e organizado.”</div>
-<div class="review">“Atendimento excelente, voltaremos com certeza.”</div>
-<div class="review">“Quartos confortáveis e bem equipados.”</div>
-<div class="review">“Piscina maravilhosa e ambiente muito tranquilo.”</div>
-<div class="review">“Melhor pousada da região, recomendo!”</div>
-<div class="review">“Experiência perfeita do início ao fim.”</div>
-</div>
+<p id="review1" style="text-align:center;">Excelente pousada</p>
+<p id="review2" style="text-align:center;">Atendimento impecável</p>
+<p id="review3" style="text-align:center;">Localização perfeita</p>
 </section>
 
 <!-- QUARTOS STANDARD -->
 <section>
-<h2>Quartos Standard</h2>
+<h2 id="h2_std">Quartos Standard</h2>
 <div class="grid">
 <img src="quarto-standard-1.jpeg">
 <img src="quarto-standard-2.jpeg">
@@ -225,7 +169,7 @@ A Pousada Le Baron oferece conforto, tranquilidade e uma experiência única na 
 
 <!-- SUPERIOR -->
 <section>
-<h2>Quartos Superior</h2>
+<h2 id="h2_sup">Quartos Superior</h2>
 <div class="grid">
 <img src="quarto-superior-1.jpeg">
 <img src="quarto-superior-2.jpeg">
@@ -236,7 +180,7 @@ A Pousada Le Baron oferece conforto, tranquilidade e uma experiência única na 
 
 <!-- PISCINA -->
 <section>
-<h2>Piscina</h2>
+<h2 id="h2_pool">Piscina / Pool / Piscina</h2>
 <div class="grid">
 <img src="piscina-1.jpeg">
 <img src="piscina-2.jpeg">
@@ -244,9 +188,9 @@ A Pousada Le Baron oferece conforto, tranquilidade e uma experiência única na 
 </div>
 </section>
 
-<!-- AREAS COMUNS -->
+<!-- ÁREAS COMUNS (CORRIGIDO COM ACENTO COMO VOCÊ PEDIU) -->
 <section>
-<h2>Áreas Comuns</h2>
+<h2 id="h2_area">Áreas Comuns</h2>
 <div class="grid">
 <img src="área-comum-1.jpeg">
 <img src="área-comum-2.jpeg">
@@ -256,47 +200,53 @@ A Pousada Le Baron oferece conforto, tranquilidade e uma experiência única na 
 <img src="área-comum-6.jpeg">
 <img src="área-comum-7.jpeg">
 <img src="área-comum-8.jpeg">
+<img src="área-comum-9.jpeg">
 </div>
 </section>
 
 <!-- RESERVA -->
 <section id="reserve">
-<h2>Reserva</h2>
-<div style="text-align:center;margin-top:20px;">
+<h2 id="h2_reserve">Reserva</h2>
+<div style="text-align:center;">
 <a class="btn whatsapp" href="https://wa.me/5582999282006">Reservar agora</a>
 </div>
 </section>
 
-<!-- LOCAL -->
-<section>
-<h2>Localização</h2>
-<iframe
-src="https://www.google.com/maps?q=Praia+do+Francês+Alagoas&output=embed"
-width="100%" height="300" style="border:0;border-radius:12px;"></iframe>
-</section>
-
 <!-- FOOTER -->
-<footer>
-Pousada Le Baron • Praia do Francês • AL • CNPJ 10.930.667/0001-47
+<footer id="footer">
+Pousada Le Baron • Praia do Francês • CNPJ 10.930.667/0001-47
 </footer>
 
-<!-- WHATS FLOAT -->
-<a class="fixed-whats" href="https://wa.me/5582999282006">💬</a>
-
-<!-- TRADUTOR COMPLETO -->
 <script>
 function changeLang(lang){
 
+// INGLÊS
 if(lang==="en"){
 document.getElementById("title").innerText="Le Baron Inn";
 document.getElementById("subtitle").innerText="Your refuge in Praia do Francês";
+document.getElementById("h2_about").innerText="Welcome";
+document.getElementById("about_text").innerText="Comfort and tranquility in a beautiful beach location.";
+document.getElementById("h2_reviews").innerText="Reviews";
+document.getElementById("h2_std").innerText="Standard Rooms";
+document.getElementById("h2_sup").innerText="Superior Rooms";
+document.getElementById("h2_area").innerText="Common Areas";
+document.getElementById("h2_reserve").innerText="Booking";
 }
 
+// ESPANHOL
 if(lang==="es"){
 document.getElementById("title").innerText="Posada Le Baron";
-document.getElementById("subtitle").innerText="Tu refugio en Praia do Francés";
+document.getElementById("subtitle").innerText="Tu refugio en Praia do Francês";
+document.getElementById("h2_about").innerText="Bienvenido";
+document.getElementById("about_text").innerText="Comodidad y tranquilidad en la playa.";
+document.getElementById("h2_reviews").innerText="Reseñas";
+document.getElementById("h2_std").innerText="Habitaciones Estándar";
+document.getElementById("h2_sup").innerText="Habitaciones Superior";
+document.getElementById("h2_area").innerText="Áreas Comunes";
+document.getElementById("h2_reserve").innerText="Reserva";
 }
 
+// PT
 if(lang==="pt"){
 location.reload();
 }
